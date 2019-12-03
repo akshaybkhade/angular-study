@@ -1,0 +1,10 @@
+Username: {{username}}
+
+<div>
+  Photos:
+  <ul>
+    <li *ngFor="let photo of photos">
+      <img [src]="photo.thumbnailUrl" alt="asd">
+    </li>
+  </ul>
+</div>
