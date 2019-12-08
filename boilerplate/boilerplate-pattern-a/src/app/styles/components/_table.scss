@@ -1,0 +1,144 @@
+.app-table-wrapper {
+  padding-top: 30px;
+
+  @include for-min-size(xl) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include for-max-size(md) {
+    padding-top: 20px;
+  }
+}
+
+%app-table {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: #676565;
+  white-space: nowrap;
+
+  @include for-max-size(md) {
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .mini-table-header {
+    display: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    background-color: $accent;
+    color: #fff;
+
+    @include for-max-size(md) {
+      display: block;
+    }
+  }
+
+  thead {
+    background-color: $accent;
+    color: #fff;
+
+    @include for-max-size(md) {
+      visibility: hidden;
+      position: fixed;
+    }
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #d2d2d4;
+    background-color: #fff;
+
+    @include for-max-size(md) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 8px 0px;
+    }
+  }
+
+  th,
+  td {
+    padding: 16px 24px;
+  }
+
+  th {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    &:not(:last-child) {
+      border-right: 1px solid #fff;
+    }
+  }
+
+  td {
+    &:before {
+      content: attr(data-th) "";
+      display: none;
+      font-weight: bold;
+      color: $accent;
+
+      @include for-max-size(md) {
+        display: block;
+      }
+    }
+
+    @include for-max-size(md) {
+      width: 50%;
+      padding: 0px 8px;
+      word-wrap: break-word;
+
+      &:nth-child(even) {
+        text-align: right;
+      }
+    }
+
+    &.no-data {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &.one-column-on-mobile {
+    td {
+      @include for-max-size(md) {
+        width: 100%;
+
+        &:nth-child(even) {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.app-table {
+  @extend %app-table;
+
+  &-striped {
+    @extend %app-table;
+
+    tbody tr:nth-child(odd) {
+      background-color: #f5f6f7;
+    }
+  }
+
+  &-horziontal-scrol-content {
+    overflow-x: auto;
+    width: 100%;
+
+    &::-webkit-scrollbar-track {
+      background-color: #fafcff;
+    }
+
+    &::-webkit-scrollbar {
+      height: 10px;
+      background-color: #fafcff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}

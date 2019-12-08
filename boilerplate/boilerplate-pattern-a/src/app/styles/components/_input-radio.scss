@@ -1,0 +1,53 @@
+.app-input-radio {
+  display: inline-block;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 22px;
+    line-height: 1;
+    padding-left: 30px;
+    color: #3b3a3a;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      transition: $transition-time;
+    }
+
+    &::before {
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border: 2px solid #d2d2d4;
+      border-radius: 50%;
+    }
+
+    &::after {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: transparent;
+      left: 6px;
+      top: 6px;
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    &::before {
+      border-color: #1f4d9c;
+    }
+
+    &::after {
+      background-color: #1f4d9c;
+    }
+  }
+}

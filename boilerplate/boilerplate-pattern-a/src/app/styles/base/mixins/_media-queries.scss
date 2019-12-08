@@ -1,0 +1,47 @@
+@mixin for-max-size($size) {
+  @if $size == sm {
+    @media screen and (max-width: map-get($breakpoints, sm)) {
+      @content;
+    }
+  } @else if $size == md {
+    @media screen and (max-width: map-get($breakpoints, md)) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media screen and (max-width: map-get($breakpoints, lg)) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media screen and (max-width: map-get($breakpoints, xl)) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin for-min-size($size) {
+  @if $size == sm {
+    @media screen and (min-width: map-get($breakpoints, sm)) {
+      @content;
+    }
+  } @else if $size == md {
+    @media screen and (min-width: map-get($breakpoints, md)) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media screen and (min-width: map-get($breakpoints, lg)) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media screen and (min-width: map-get($breakpoints, xl)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  }
+}

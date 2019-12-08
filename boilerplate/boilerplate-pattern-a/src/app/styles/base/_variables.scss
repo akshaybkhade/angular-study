@@ -1,0 +1,57 @@
+// colors list
+$navy-blue: #0079c8;
+$havelock-blue: #5478cb;
+$medium-aquamarine: #56d1a6;
+$puerto-rico: #52b4a5;
+$neon-carrot: #fd8632;
+$ronchi: #e8ad52;
+$sea-pink: #de7682;
+$torch-red: #e50021;
+$eclipse: #3b3a3a;
+$dim-gray: #707070;
+$nobel: #9a9a9a;
+$athens-grey: #d6d7d9;
+$white-lilac: #f3f3f4;
+
+// main colors
+$accent: $navy-blue;
+$success: #56d1a6;
+$warning: #fd8632;
+$danger: #de7682;
+$error: #e50021;
+
+// btn colors
+$btn-accent: $navy-blue;
+$btn-primary: $havelock-blue;
+$btn-secondary: $athens-grey;
+$btn-secondary-darken: $nobel;
+$btn-warning: $ronchi;
+$btn-danger: $sea-pink;
+$btn-success: $medium-aquamarine;
+$btn-success-darken: $puerto-rico;
+
+// text colors
+$main-text: $eclipse;
+$gray-text: $dim-gray;
+$text-link: $navy-blue;
+$text-link-danger: $sea-pink;
+
+// bg colors
+$main-bg: $white-lilac;
+
+// =================================== //
+
+$transition-time: 0.4s;
+
+$breakpoints: (
+  sm: 576px,
+  md: 767px,
+  lg: 991px,
+  xl: 1200px
+);
+
+// navigation
+$nav-width: 260px;
+$mini-nav-width: 70px;
+$nav-header-height: 190px;
+$nav-header-border: 10px;

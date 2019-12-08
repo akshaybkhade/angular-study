@@ -1,0 +1,40 @@
+.app-actions-card {
+  padding: 20px;
+  border-radius: 30px;
+  border: solid 1px #e5e6e7;
+  margin-bottom: 15px;
+
+  &-title {
+    margin-bottom: 20px;
+  }
+
+  &-body {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    flex-shrink: 0;
+    max-width: 128px;
+  }
+
+  button {
+    flex-shrink: 1;
+    width: 100%;
+    margin-left: 12px;
+  }
+
+  @media (max-width: 1365px) {
+    &-body {
+      flex-direction: column;
+    }
+
+    img {
+      margin-bottom: 12px;
+    }
+
+    button {
+      margin-left: 0;
+    }
+  }
+}

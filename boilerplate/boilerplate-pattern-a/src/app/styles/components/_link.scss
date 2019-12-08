@@ -1,0 +1,26 @@
+%app-link {
+  display: inline-block;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: $transition-time;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+$links-list: (
+  link: $text-link,
+  link-danger: $text-link-danger
+);
+
+@each $class, $color in $links-list {
+  .app-#{$class} {
+    @extend %app-link;
+    color: $color;
+
+    &:hover {
+      color: darken($color, 7);
+    }
+  }
+}

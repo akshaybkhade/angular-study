@@ -1,0 +1,130 @@
+// variables
+$btns-list: (
+  accent: (
+    bg-color: $btn-accent,
+    text-color: white
+  ),
+  primary: (
+    bg-color: $btn-primary,
+    text-color: white
+  ),
+  secondary: (
+    bg-color: $btn-secondary,
+    text-color: $gray-text
+  ),
+  secondary-darken: (
+    bg-color: $btn-secondary-darken,
+    text-color: white
+  ),
+  danger: (
+    bg-color: $btn-danger,
+    text-color: white
+  ),
+  warning: (
+    bg-color: $btn-warning,
+    text-color: white
+  ),
+  success: (
+    bg-color: $btn-success,
+    text-color: white
+  ),
+  success-darken: (
+    bg-color: $btn-success-darken,
+    text-color: white
+  ),
+  delete: (
+    bg-color: $danger,
+    text-color: white
+  ),
+  user-lock-unlock: (
+    bg-color: $nobel,
+    text-color: white
+  ),
+  user-reset-password: (
+    bg-color: $havelock-blue,
+    text-color: white
+  ),
+  user-edit: (
+    bg-color: $puerto-rico,
+    text-color: white
+  ),
+  force-logout: (
+    bg-color: $danger,
+    text-color: white
+  )
+);
+
+$btns-list-outline: (
+  secondary: (
+    bg-color: white,
+    bd-color: $btn-secondary,
+    text-color: $gray-text,
+    hover-text-color: $gray-text
+  )
+);
+
+// Abstract classes
+%btn {
+  min-height: 40px;
+  border-radius: 3px;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.19;
+  cursor: pointer;
+
+  .btn-group & {
+    box-shadow: none;
+  }
+}
+
+// Users classes
+.app-btn {
+  @each $btn-name, $colors in $btns-list {
+    &-#{$btn-name} {
+      $bg-color: map-get($colors, bg-color);
+      $text-color: map-get($colors, text-color);
+
+      @extend %btn;
+
+      background-color: $bg-color;
+      color: $text-color;
+
+      &:hover {
+        background-color: darken($bg-color, 5);
+
+        @if $text-color == white {
+          color: lighten($text-color, 1);
+        } @else {
+          color: darken($text-color, 10);
+        }
+      }
+
+      &[disabled] {
+        cursor: not-allowed;
+
+        &:hover {
+          background-color: $bg-color;
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  @each $btn-name, $colors in $btns-list-outline {
+    &-outline-#{$btn-name} {
+      $bd-color: map-get($colors, bd-color);
+
+      @extend %btn;
+
+      background-color: map-get($colors, bg-color);
+      color: map-get($colors, text-color);
+      border: solid 1px $bd-color;
+
+      &:hover {
+        color: map-get($colors, hover-text-color);
+        background-color: $bd-color;
+      }
+    }
+  }
+}

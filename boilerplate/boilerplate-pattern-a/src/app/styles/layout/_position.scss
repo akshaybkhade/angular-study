@@ -1,0 +1,35 @@
+// Abstract classes
+%d-flex {
+  display: flex;
+}
+
+%align-center {
+  align-items: center;
+}
+
+// Users classes
+.app-flex-center {
+  @extend %d-flex;
+  @extend %align-center;
+  justify-content: center;
+}
+
+.app-flex-align-center {
+  @extend %d-flex;
+  @extend %align-center;
+}
+
+.app-flex-align-start {
+  @extend %d-flex;
+  align-items: flex-start;
+}
+
+.app-flex-justify-between {
+  @extend %d-flex;
+  justify-content: space-between;
+}
+
+.app-flex-justify-around {
+  @extend %d-flex;
+  justify-content: space-around;
+}

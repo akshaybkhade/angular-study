@@ -1,0 +1,23 @@
+.app-summary-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &-item {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      padding-bottom: 12px;
+    }
+  }
+
+  &-label {
+    color: #707070;
+
+    @include for-min-size(sm) {
+      text-align: right;
+    }
+  }
+}

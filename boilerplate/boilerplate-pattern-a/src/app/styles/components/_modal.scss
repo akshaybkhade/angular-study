@@ -1,0 +1,61 @@
+.modal-dialog {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom-color: #d6d7d9;
+  padding-bottom: 16px;
+
+  h4 {
+    margin-top: 6px;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+
+    @include for-max-size(sm) {
+      margin-top: 2px;
+      font-size: 16px;
+    }
+  }
+
+  .close {
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    outline: none;
+    color: #707070;
+    font-size: 16px;
+    font-weight: 500;
+    background: transparent;
+    opacity: 1;
+    
+    
+    @include for-max-size(sm) {
+      font-size: 14px;
+    }
+  }
+
+  .icon-close {
+    margin-left: 3px;
+    font-size: 30px;
+    font-weight: bold;
+
+    @include for-max-size(sm) {
+      font-size: 24px;
+    }
+  }
+}
+
+.modal-xl {
+  @include for-max-size(xl) {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  @include for-max-size(sm) {
+    padding: 0;
+  }
+}

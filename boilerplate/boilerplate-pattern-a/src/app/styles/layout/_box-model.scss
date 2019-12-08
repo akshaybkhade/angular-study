@@ -1,0 +1,5 @@
+.app-no-margin-xl {
+  @include for-min-size(xl) {
+    margin: 0!important;
+  }
+}

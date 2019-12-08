@@ -1,0 +1,19 @@
+.app-pagination {
+  flex-wrap: wrap;
+
+  .pagination {
+    &-prev,
+    &-next {
+      a {
+        padding-top: 3px;
+        padding-bottom: 3px;
+        text-decoration: none;
+        font-size: 24px;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+}

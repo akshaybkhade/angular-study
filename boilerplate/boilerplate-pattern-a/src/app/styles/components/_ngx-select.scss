@@ -1,0 +1,44 @@
+ngx-select.app-select .ngx-select {
+  &:focus {
+    outline: none;
+  }
+
+  &__toggle {
+    border-color: #ddd;
+    cursor: pointer;
+  }
+
+  &__toggle-buttons {
+    padding-left: 12px;
+    padding-right: 8px;
+
+    .dropdown-toggle {
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+      }
+
+      &::before {
+        top: 10px;
+        border-bottom: 5px solid #676565;
+      }
+
+      &::after {
+        bottom: 10px;
+        border-top: 5px solid #676565;
+      }
+    }
+  }
+
+  &__choices {
+    min-width: 1px;
+    max-height: 150px;
+  }
+
+  &__selected-single span{
+    white-space: nowrap;
+  }
+}

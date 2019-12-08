@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: $main-bg;
+  color: $main-text;
+}
+
+a {
+  @extend .app-link;
+}
+
+h5 {
+  margin-bottom: 24px;
+
+  @include for-max-size(md) {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+}
+
+input {
+  min-width: 50px;
+}

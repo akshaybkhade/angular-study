@@ -1,0 +1,54 @@
+%wrapper {
+  @extend .container-fluid;
+
+  flex: 1;
+  margin: 24px 0px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+
+  @include for-max-size(md) {
+    margin: 15px 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.app-page {
+  &-wrapper {
+    @extend %wrapper;
+
+    // &-transparent {
+    //   @extend %wrapper;
+
+    //   background-color: transparent;
+    //   box-shadow: none;
+    // }
+
+    // &-md-transparent {
+    //   @extend %wrapper;
+
+    //   @include for-min-size(md) {
+    //     background-color: transparent;
+    //     box-shadow: none;
+    //   }
+    // }
+  }
+
+  &-header {
+    h2 {
+      margin-bottom: 24px;
+      color: $main-text;
+      line-height: 1.23;
+      font-size: 28px;
+      font-weight: 500;
+
+      @include for-max-size(md) {
+        margin-bottom: 15px;
+        font-size: 22px;
+      }
+    }
+  }
+}

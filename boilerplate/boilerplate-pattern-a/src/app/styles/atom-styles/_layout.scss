@@ -1,0 +1,55 @@
+.app-padding {
+  &-b {
+    &-0 {
+      padding-bottom: 0px !important;
+    }
+  }
+
+  &-r {
+    &-8 {
+      padding-right: 8px !important;
+    }
+  }
+}
+
+.app-margin {
+  &-r {
+    &-8 {
+      margin-right: 8px !important;
+    }
+
+    &-16 {
+      margin-right: 16px !important;
+    }
+  }
+
+  &-b {
+    &-0 {
+      margin-bottom: 0px !important;
+    }
+
+    &-16 {
+      margin-bottom: 16px !important;
+    }
+  }
+
+  &-l {
+    &-16 {
+      margin-left: 16px !important;
+    }
+  }
+
+  &-0 {
+    margin: 0px !important;
+  }
+}
+
+.app-w-100-md {
+  @include for-max-size(md) {
+    width: 100% !important;
+  }
+}
+
+.app-border-top {
+  border-top: 1px solid #d6d7d9 !important;
+}

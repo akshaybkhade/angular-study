@@ -1,0 +1,74 @@
+.app-tabset {
+  .nav-tabs {
+    @include for-min-size(md) {
+      background-color: $main-bg;
+      border-bottom: none;
+    }
+
+    @include for-max-size(md) {
+      flex-direction: column;
+      padding: 20px 15px;
+      border-bottom-color:#d6d7d9;
+    }
+  }
+
+  .nav-item {
+    margin: 0;
+
+    @include for-max-size(md) {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .nav-link {
+    padding: 20px 24px;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #707070;
+    line-height: 1.25;
+    text-decoration: none;
+
+    @include for-max-size(md) {
+      padding: 10px 12px;
+      border: 2px solid #d6d7d9;
+      border-radius: 3px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    &:hover,
+    &:focus {
+      border: none;
+
+      @include for-max-size(md) {
+        border: 2px solid #d6d7d9;
+      }
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &.active {
+      color: $accent;
+
+      @include for-max-size(md) {
+        border: 2px solid $accent;
+      }
+    }
+  }
+
+  .tab-content {
+    padding: 30px 0;
+    background-color: #fff;
+
+    @include for-max-size(md) {
+      padding: 20px 0;
+    }
+  }
+}

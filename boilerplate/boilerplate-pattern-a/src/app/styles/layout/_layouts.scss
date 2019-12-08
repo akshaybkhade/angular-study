@@ -1,0 +1,11 @@
+.app-container-fluid {
+  @extend .container-fluid;
+
+  flex: 1;
+
+  @include for-min-size(md) {
+    $horizontal-pd-space: 24px;
+    padding-right: $horizontal-pd-space;
+    padding-left: $horizontal-pd-space;
+  }
+}
